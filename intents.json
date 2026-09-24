@@ -1,0 +1,243 @@
+{
+  "intents": [
+    {
+      "tag": "greeting",
+      "patterns": [
+        "Hi",
+        "Hey",
+        "How are you",
+        "Is anyone there?",
+        "Hello",
+        "Good day"
+      ],
+      "responses": [
+        "Hey :-) how can I help you?",
+        "Hello, thanks for visiting, how can I help you?",
+        "Hi there, what can I do for you?",
+        "Hi there, how can I help?"
+      ]
+    },
+    {
+      "tag": "goodbye",
+      "patterns": ["Bye", "See you later", "Goodbye"],
+      "responses": [
+        "See you later, thanks for visiting",
+        "Have a nice day",
+        "Bye! Come back again soon."
+      ]
+    },
+    {
+      "tag": "thanks",
+      "patterns": ["Thanks", "Thank you", "That's helpful", "Thank's a lot!"],
+      "responses": ["Happy to help!", "Any time!", "My pleasure"]
+    },
+    {
+      "tag": "Branches",
+      "patterns": [
+        "branch list",
+        "branch exam",
+        "list of branches",
+        "display all branches",
+        "all branch"
+      ],
+      "responses": [
+        "1. EEE,\n2. AIML,\n3. Civil Engineering,\n4. CS/IS/DS,\n5. ECE,\n6. Mechanical"
+      ]
+    },
+    {
+      "tag": "EEE",
+      "patterns": [
+        "branch EEE",
+        "EEE exam",
+        "EEE",
+        "eee",
+        "eee details"
+      ],
+      "responses": [
+        "Electrical & Electronics Engineer (EEE)\n1. Syllabus,\n2. Question Papers,\n3. Exam Details,\n4. Eligibility,\n\nMore Details Click here:<a href='EEE'>EEE Details</a>"
+      ]
+    },
+    {
+      "tag": "AI/ML",
+      "patterns": [
+        "branch aiml",
+        "aiml exam",
+        "AIML",
+        "AI/ML",
+        "aiml details"
+      ],
+      "responses": [
+        "AI/ML-Artificial Intelligence and Machine Learning\n1. Syllabus,\n2. Question Papers,\n3. Exam Details,\n4. Eligibility,\n\nMore Details Click here:<a href='AIML'>AIML Details</a>"
+      ]
+    },
+    {
+      "tag": "Civil Engineering",
+      "patterns": [
+        "branch civil eng",
+        "civil engg exam",
+        "Civil",
+        "civil",
+        "civil details"
+      ],
+      "responses": [
+        "Civil Engineering:\n1. Syllabus,\n2. Question Papers,\n3. Exam Details,\n4. Eligibility,\n\nMore Details Click here:<a href='CivilEng'>Civil Engineering Details</a>"
+      ]
+    },
+    {
+      "tag": "ECE",
+      "patterns": [
+        "ECE",
+        "ece exam",
+        "ece",
+        "ece ",
+        "electronics and communication"
+      ],
+      "responses": [
+        "Civil Engineering:\n1. Syllabus,\n2. Question Papers,\n3. Exam Details,\n4. Eligibility,\n\nMore Details Click here:<a href='EC'>ECE Details</a>"
+      ]
+    },
+    {
+      "tag": "Mechanical",
+      "patterns": [
+        "mechanical",
+        "Mechanical Engineering",
+        "mech",
+        "Mechanical exams",
+        "mech exams"
+      ],
+      "responses": [
+        "Mechanical Engineering:\n1. Syllabus,\n2. Question Papers,\n3. Exam Details,\n4. Eligibility,\n\nMore Details Click here:<a href='Mechanical'>Mechanical Engineering Details</a>"
+      ]
+    },
+    {
+      "tag": "CSISDS",
+      "patterns": [
+        "CS",
+        "CS IS DS",
+        "CS",
+        "IS",
+        "DS",
+        "csisds",
+        "cs",
+        "is",
+        "ds"
+      ],
+      "responses": [
+        "CS IS DS:\n1. Syllabus,\n2. Question Papers,\n3. Exam Details,\n4. Eligibility,\n\nMore Details Click here:<a href='CSISDS'>CS/IS/DS Details</a>"
+      ]
+    },
+    {
+      "tag": "Exams",
+      "patterns": [
+        "exam list",
+        "exams",
+        "list of exams",
+        "govt exam list",
+        "display all exams",
+        "display all govt exams",
+        "government exams",
+        "all government exams"
+      ],
+      "responses": [
+        "GATE,\nPSU,\nBanking,\nIES,\nCivil Services\nDefence Services"
+      ]
+    },
+    {
+      "tag": "GATE",
+      "patterns": [
+        "gate exam",
+        "Gate",
+        "GATE",
+        "gate exam details",
+        "gate details",
+        "details of gate exam"
+      ],
+      "responses": [
+        "GATE (Graduate Aptitude Test in Engineering),\nEligibility: \n1.Acadamic Qualification:B.E./B.Tech. are eligible,\n2.Age Limit: There is no age limit for taking the GATE exam,\n3.Minimum Marks: typically 55-60%,\nMore Details Click on this link :<a href='GATE'>Gate Exam Details</a>"
+      ]
+    },
+    {
+      "tag": "PSU",
+     "patterns": [
+        "psu exam",
+        "PSU",
+        "psu exam details",
+        "psu details",
+        "details of psu exam"
+      ],
+      "responses": [
+        "Public Sector Undertakings (PSUs),\nEligibility: \n1.he basic eligibility requires a B.Tech/B.E. degree in the relevant engineering discipline. ,\n2.Age Limit: Age limits and other criteria vary by PSU.,\n3.Benifits:1.Competitive salary\n2.career advancement\n3.Government job security.,\nMore Details Click on this link :<a href='PSU'>PSU Exam Details</a>"
+      ]
+    },
+    {
+      "tag": "IES",
+      "patterns": [
+        "ies exam",
+        "IES",
+        "ies exam details",
+        "ies details",
+        "details of ies exam"
+      ],
+      "responses": [
+        "Indian Engineering Services(IES),\nEligibility: \n1.Candidates must hold a degree in engineering from a recognised university ,\n2.Benifits:1.High profile roles\n2.Opportunity to work in various sectors\n3.Career growth,\nMore Details Click on this link :<a href='IES'>IES Exam Details</a>"
+      ]
+    },
+    {
+      "tag": "Civil Services",
+      "patterns":  [
+        "civil exam",
+        "Civil Services",
+        "civil exam details",
+        "civil services details",
+        "details of civil exam"
+      ],
+      "responses": [
+        "Civil Services Exam (IAS/IPS/IFS),\nEligibility: \n1.The minimum educational qualification is a bachelor’s degree in any discipline.,\n2.Benifits:1.A chance to become a key part of the government machinery.\n2.Opportunities to serve in diverse sectors\n3.The ability to make a significant impact,\nMore Details Click on this link :<a href='CivilServices'>Civil Services Exam Details</a>"
+      ]
+    },
+     {
+      "tag": "Defence Service",
+      "patterns":  [
+        "defenceservice exam",
+        "Defence Service",
+        "Defence Services",
+        "DS exam details",
+        "ds exam details",
+        "ds details",
+        "DS details",
+        "details of DS exam"
+      ],
+      "responses": [
+        "Defence Services (Indian Army, Navy, Air Force),\nEligibility: \n1.Candidates must possess a bachelor’s degree in any discipline,\n2.Benifits:1.Competitive salary.\n2.Opportunities for career progression\n3.The chance to serve in key administrative and financial roles.,\nMore Details Click on this link :<a href='DefenceServices'>Defence Services Exam Details</a>"
+      ]
+    },
+    {
+      "tag": "Banking Exams",
+      "patterns": [
+        "banking exam",
+        "Banking Exams",
+        "banking exams",
+        "banking exam details",
+        "bank exam details",
+        "details of banking exam"
+      ],
+      "responses": [
+        "Banking Exams (IBPS, SBI PO),\nEligibility: \n1.Candidates must possess a bachelor’s degree in any discipline,\n2.Benifits:1.Competitive salary.\n2.Opportunities for career progression\n3.The chance to serve in key administrative and financial roles.,\nMore Details Click on this link :<a href='BankingExams'>Banking Exam Details</a>"
+      ]
+    },
+    {
+      "tag": "Question Papers",
+      "patterns": [
+        "previous year qp",
+        "all qp",
+        "all question papers",
+        "all papers",
+        "question papers",
+        "qp"
+      ],
+      "responses": [
+        "1.<a href='EEE'>EEE</a>,\n2.<a href='AIML'>AI / ML</a>,3.<a href='EC'>ECE</a>,\n4.<a href='CivilEng'>Civil Eng</a>,\n5.<a href='Mechanical'>Mechanical</a>,\n6.<a href='CSISDS'>CS/IS/DS</a>"
+      ]
+    }
+  ]
+}
