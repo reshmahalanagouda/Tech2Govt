@@ -1,186 +1,45 @@
 /*
-Author       : theme_ocean 
-Template Name: Purdue - Education HTML Template
-Version      : 1.0
+ Author : theme_ocean
+ Template Name: Purdue - Education HTML Template
+ Version : 1.0
 */
 (function($) {
-	'use strict';
-	
-	jQuery(document).on('ready', function(){
-	
-		/*PRELOADER JS*/
-		jQuery(window).on('load',function() {
-		  setTimeout(function(){
-			$('.preloaders').fadeToggle();
-			}, 1500);
-		});
-		/*END PRELOADER JS*/	
-			
-		/*START MENU JS*/		
-			$(".mobile_menu").simpleMobileMenu({			
-				"menuStyle": "slide"
-			});
-			$(window).on('scroll', function(){
-				if ( $(window).scrollTop() > 70 ) {
-					$('.site-navigation, .header-white, .header').addClass('navbar-fixed');
-				} else {
-					$('.site-navigation, .header-white, .header').removeClass('navbar-fixed');
-				}
-			});	
-		/*END MENU JS*/
-		
-		/*START VIDEO JS*/
-		$('.video-play').magnificPopup({
-            type: 'iframe'
+    'use strict';
+    jQuery(document).on('ready', function(){
+        jQuery(window).on('load',function() {
+            setTimeout(function(){
+                $('.preloaders').fadeToggle();
+            }, 1500);
         });
-		$('.co-video-play').magnificPopup({
-            type: 'iframe'
+        $(".mobile_menu").simpleMobileMenu({ "menuStyle": "slide" });
+        $(window).on('scroll', function() {
+            if ($(this).scrollTop() > 100) { $('.main_header').addClass('sticky'); }
+            else { $('.main_header').removeClass('sticky'); }
         });
-		$('.product_item').mixItUp();
-		/*END VIDEO JS*/	
-
-		/* START VIDEO POPUP JS */
-		$('.magnific_popup').magnificPopup({
-		  disableOn: 700,
-		  type: 'iframe',
-		  mainClass: 'mfp-fade',
-		  removalDelay: 160,
-		  preloader: false,
-		  fixedContentPos: false,
-		  disableOn: 300
-		});			
-
-		/*START PARTNER LOGO*/
-		$('.partner').owlCarousel({
-		  autoPlay: 3000, //Set AutoPlay to 3 seconds
-		  items : 4,
-		  itemsDesktop : [1199,3],
-		  itemsDesktopSmall : [979,3]
-		});
-		/*END PARTNER LOGO*/		
-
-		/*START TESTIMONIAL JS*/	
-		$("#testimonial-slider").owlCarousel({
-		   items:3,
-			itemsDesktop:[1000,3],
-			itemsDesktopSmall:[980,2],
-			itemsTablet:[768,2],
-			itemsMobile:[650,1],
-			pagination:true,
-			navigation:true,
-			navigationText:["",""],
-			slideSpeed:1000,
-			autoPlay:false
-		});
-		/*END TESTIMONIAL JS*/
-
-		/* START EVENT JS */
-		 $("#event-slider").owlCarousel({
-			items:3,
-			itemsDesktop:[1199,3],
-			itemsDesktopSmall:[979,2],
-			itemsTablet:[768,2],
-			itemsMobile:[600,1],
-			pagination: false,
-			navigation:true,
-			navigationText:["",""],
-			slideSpeed:1000,
-			autoPlay:false
-		});
-		/* END EVENT JS */	
-		
-			
-	}); 		
-	
-	/*START RANGE SLIDER*/
-	    var rangeSlider = function(){
-        var slider = $('.range-slider'),
-            range = $('.range-slider input[type="range"]'),
-            value = $('.range-value');
-        slider.each(function(){
-            value.each(function(){
-                var value = $(this).prev().attr('value');
-                $(this).html(value);
-            });
-            range.on('input', function(){
-                $(this).next(value).html(this.value);
-            });
-        });
-    };
-    rangeSlider();
-	/*END RANGE SLIDER*/
-	
-	/*INITIATE PURE COUNTER*/
-		$('.counter_feature').on('inview', function(event, visible, visiblePartX, visiblePartY) {
-			if (visible) {
-				$(this).find('.counter-num').each(function () {
-					var $this = $(this);
-					$({ Counter: 0 }).animate({ Counter: $this.text() }, {
-						duration: 2000,
-						easing: 'swing',
-						step: function () {
-							$this.text(Math.ceil(this.Counter));
-						}
-					});
-				});
-				$(this).unbind('inview');
-			}
-		});
-		
-		
-
-	/*START WOW ANIMATION JS*/
-	  new WOW().init();	
-	/*END WOW ANIMATION JS*/	
-	
-	const lenis = new Lenis()
-
-
-    lenis.on('scroll', ScrollTrigger.update)
-
-    gsap.ticker.add((time) => {
-        lenis.raf(time * 1000)
-    })
-
-    gsap.ticker.lagSmoothing(0)
-			
-})(jQuery);
-
-window.onload = function () {
-    let slides = document.getElementsByClassName('carousel-item');
-
-    function addActive(idx){
-        try{
-            if(slides[idx] && slides[idx].classList){
-                slides[idx].classList.add('active');
-            }
-        }catch(e){}
+    });
+    // SAFE SLIDER - no more classList crash
+    let slides = document.querySelectorAll('.slide');
+    function addActive(slide){
+        if(!slide ||!slide.classList) return;
+        try{ slide.classList.add('active'); }catch(e){}
     }
-
+    function removeActive(slide){
+        if(!slide ||!slide.classList) return;
+        try{ slide.classList.remove('active'); }catch(e){}
+    }
     try{
-        if(slides.length > 0){
-            // remove existing active to avoid double
-            for(let j=0;j<slides.length;j++) slides[j].classList.remove('active');
-            addActive(0);
+        if(slides && slides.length > 0){
+            addActive(slides[0]);
             setInterval(function () {
+                let activeIndex = -1;
                 for (let i = 0; i < slides.length; i++) {
-                    if (slides[i].classList.contains('active')) {
-                        slides[i].classList.remove('active');
-                        let next = (i + 1) % slides.length;
-                        addActive(next);
-                        break;
-                    }
+                    if (slides[i].classList.contains('active')) { activeIndex = i; break; }
                 }
-            }, 5000);
+                if(activeIndex === -1) activeIndex = 0;
+                let nextIndex = (activeIndex + 1) % slides.length;
+                setTimeout(removeActive, 350, slides[activeIndex]);
+                addActive(slides[nextIndex]);
+            }, 3500);
         }
-    }catch(e){ console.log('carousel safe', e); }
-
-    try{
-        var activeEl = document.querySelector('.one-page-nav.current');
-        if(activeEl && activeEl.classList) activeEl.classList.add('active');
-    }catch(e){ console.log('nav safe'); }
-}
-    
-          
-  
-
+    }catch(e){ console.log('slider safe'); }
+})(jQuery);
