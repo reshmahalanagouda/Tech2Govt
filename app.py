@@ -15,6 +15,14 @@ def AboutUs_get():
 def contact_get():
     return render_template("contact.html")
 
+@app.get("/about")
+def about_get():
+    return render_template("AboutUs.html")
+
+@app.get("/abc")
+def abc_get():
+    return render_template("AboutUs.html")
+
 @app.route("/EEE")
 def EEE_get():
     return render_template("EEE.html")
