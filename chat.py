@@ -5,7 +5,7 @@ import torch
 from model import NeuralNet
 from nltk_utils import bag_of_words, tokenize
 
-BASE_DIR = os.path.dirname(os.path.abspath(_file_))
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
 with open(os.path.join(BASE_DIR, 'static', 'intents.json'), 'r') as json_data:
