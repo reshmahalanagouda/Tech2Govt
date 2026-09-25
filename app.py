@@ -385,53 +385,53 @@ def SDSC_get():
 #CIVIL SYLLABUS
 @app.route("/CVLGATE")
 def CVLGATE_get():
-    pdf_dir = os.path.join(app.root_path, 'static')
-    return send_from_directory(pdf_dir, 'PDF/CIVIL/SYLLABUS/GATE.pdf')
+    pdf_dir = os.path.join(app.root_path, 'static','PDF','CIVIL','SYLLABUS')
+    return send_from_directory(pdf_dir, 'GATE.pdf')
 
 @app.route("/CVLCPWD")
 def CVLCPWD_get():
-    pdf_dir = os.path.join(app.root_path, 'static')
-    return send_from_directory(pdf_dir, 'PDF/CIVIL/SYLLABUS/CPWD.pdf')
+    pdf_dir = os.path.join(app.root_path, 'static','PDF','CIVIL','SYLLABUS')
+    return send_from_directory(pdf_dir, 'CPWD.pdf')
 
 @app.route("/CVLMES")
 def CVLMES_get():
-    pdf_dir = os.path.join(app.root_path, 'static')
-    return send_from_directory(pdf_dir, 'PDF/CIVIL/SYLLABUS/MES.pdf')
+    pdf_dir = os.path.join(app.root_path, 'static','PDF','CIVIL','SYLLABUS')
+    return send_from_directory(pdf_dir, 'MES.pdf')
 
 @app.route("/CVLPSU")
 def CVLPSU_get():
-    pdf_dir = os.path.join(app.root_path, 'static')
-    return send_from_directory(pdf_dir, 'PDF/CIVIL/SYLLABUS/PSU.pdf')
+    pdf_dir = os.path.join(app.root_path, 'static','PDF','CIVIL','SYLLABUS')
+    return send_from_directory(pdf_dir, 'PSU.pdf')
 
 @app.route("/CVLPWDJE")
 def CVLPWDJE_get():
-    pdf_dir = os.path.join(app.root_path, 'static')
-    return send_from_directory(pdf_dir, 'PDF/CIVIL/SYLLABUS/PWDJE.pdf')
+    pdf_dir = os.path.join(app.root_path, 'static','PDF','CIVIL','SYLLABUS')
+    return send_from_directory(pdf_dir, 'PWDJE.pdf')
 
 @app.route("/CVLPWDR")
 def CVLPWDR_get():
-    pdf_dir = os.path.join(app.root_path, 'static')
-    return send_from_directory(pdf_dir, 'PDF/CIVIL/SYLLABUS/PWDR.pdf')
+    pdf_dir = os.path.join(app.root_path, 'static','PDF','CIVIL','SYLLABUS')
+    return send_from_directory(pdf_dir, 'PWDR.pdf')
 
 @app.route("/CVLRAILWAY")
 def CVLRAILWAY_get():
-    pdf_dir = os.path.join(app.root_path, 'static')
-    return send_from_directory(pdf_dir, 'PDF/CIVIL/SYLLABUS/RAILWAY.pdf')
+    pdf_dir = os.path.join(app.root_path, 'static','PDF','CIVIL','SYLLABUS')
+    return send_from_directory(pdf_dir, 'RAILWAY.pdf')
 
 @app.route("/CVLRRBJE")
 def CVLRRBJE_get():
-    pdf_dir = os.path.join(app.root_path, 'static')
-    return send_from_directory(pdf_dir, 'PDF/CIVIL/SYLLABUS/RRBJE.pdf')
+    pdf_dir = os.path.join(app.root_path, 'static','PDF','CIVIL','SYLLABUS')
+    return send_from_directory(pdf_dir, 'RRBJE.pdf')
 
 @app.route("/CVLSSCJE")
 def CVLSSCJE_get():
-    pdf_dir = os.path.join(app.root_path, 'static')
-    return send_from_directory(pdf_dir, 'PDF/CIVIL/SYLLABUS/SSCJE.pdf')
+    pdf_dir = os.path.join(app.root_path, 'static','PDF','CIVIL','SYLLABUS')
+    return send_from_directory(pdf_dir, 'SSCJE.pdf')
 
 @app.route("/CVLNEW")
 def CVLNEW_get():
-    pdf_dir = os.path.join(app.root_path, 'static')
-    return send_from_directory(pdf_dir, 'PDF/CIVIL/SYLLABUS/NEWSYL.pdf')
+    pdf_dir = os.path.join(app.root_path, 'static','PDF','CIVIL','SYLLABUS')
+    return send_from_directory(pdf_dir, 'NEWSYL.pdf')
 
 #CIVIL QUESTION PAPERS
 
@@ -539,28 +539,28 @@ def GATEP2_get():
 
 @app.route("/BSNL2024")
 def BSNL2024_get():
-    pdf_dir = os.path.join(app.root_path, 'static')
-    return send_from_directory(pdf_dir, 'PDF/ECE/SYLLABUS/BSNL2024.pdf')
+    pdf_dir = os.path.join(app.root_path, 'static','PDF','ECE','SYLLABUS')
+    return send_from_directory(pdf_dir, 'BSNL2024.pdf')
 
 @app.route("/BSNL2026")
 def BSNL2026_get():
-    pdf_dir = os.path.join(app.root_path, 'static')
-    return send_from_directory(pdf_dir, 'PDF/ECE/SYLLABUS/BSNL2026.pdf')
+    pdf_dir = os.path.join(app.root_path, 'static','PDF','ECE','SYLLABUS')
+    return send_from_directory(pdf_dir, 'BSNL2026.pdf')
 
 @app.route("/CEPTAM")
 def CEPTAM_get():
-    pdf_dir = os.path.join(app.root_path, 'static')
-    return send_from_directory(pdf_dir, 'PDF/ECE/SYLLABUS/CEPTAM.pdf')
+    pdf_dir = os.path.join(app.root_path, 'static','PDF','ECE','SYLLABUS')
+    return send_from_directory(pdf_dir, 'CEPTAM.pdf')
 
 @app.route("/ECGATE2026")
 def ECGATE2026_get():
-    pdf_dir = os.path.join(app.root_path, 'static')
-    return send_from_directory(pdf_dir, 'PDF/ECE/SYLLABUS/GATE2026.pdf')
+    pdf_dir = os.path.join(app.root_path, 'static','PDF','ECE','SYLLABUS')
+    return send_from_directory(pdf_dir, 'GATE2026.pdf')
 
 @app.route("/NIC2024")
 def NIC2024_get():
-    pdf_dir = os.path.join(app.root_path, 'static')
-    return send_from_directory(pdf_dir, 'PDF/ECE/SYLLABUS/NIC2024.pdf')
+    pdf_dir = os.path.join(app.root_path, 'static','PDF','ECE','SYLLABUS')
+    return send_from_directory(pdf_dir, 'NIC2024.pdf')
 
 #ECE QUESTION PAPERS
 
@@ -623,23 +623,23 @@ def NIC2020_get():
 
 @app.route("/MGATE")
 def MGATE_get():
-    pdf_dir = os.path.join(app.root_path, 'static')
-    return send_from_directory(pdf_dir, 'PDF/MECHANICAL/SYLLABUS/GATE.pdf')
+    pdf_dir = os.path.join(app.root_path, 'static','PDF','MECHANICAL','SYLLABUS')
+    return send_from_directory(pdf_dir, 'GATE.pdf')
 
 @app.route("/MKPSC")
 def MKPSC_get():
-    pdf_dir = os.path.join(app.root_path, 'static')
-    return send_from_directory(pdf_dir, 'PDF/MECHANICAL/SYLLABUS/KPSC.pdf')
+    pdf_dir = os.path.join(app.root_path, 'static','PDF','MECHANICAL','SYLLABUS')
+    return send_from_directory(pdf_dir, 'KPSC.pdf')
 
 @app.route("/MSSCJE")
 def MSSCJE_get():
-    pdf_dir = os.path.join(app.root_path, 'static')
-    return send_from_directory(pdf_dir, 'PDF/MECHANICAL/SYLLABUS/SSCJE.pdf')
+    pdf_dir = os.path.join(app.root_path, 'static','PDF','MECHANICAL','SYLLABUS')
+    return send_from_directory(pdf_dir, 'SSCJE.pdf')
 
 @app.route("/MUPSC")
 def MUPSC_get():
-    pdf_dir = os.path.join(app.root_path, 'static')
-    return send_from_directory(pdf_dir, 'PDF/MECHANICAL/SYLLABUS/UPSC.pdf')
+    pdf_dir = os.path.join(app.root_path, 'static','PDF','MECHANICAL','SYLLABUS')
+    return send_from_directory(pdf_dir, 'UPSC.pdf')
 
 #MECHANICAL QUESTION PAPERS
 
@@ -727,65 +727,65 @@ def SSEJE2024_get():
 
 @app.route("/CSGATE")
 def CSGATE_get():
-    pdf_dir = os.path.join(app.root_path, 'static')
-    return send_from_directory(pdf_dir, 'PDF/CSISDS/SYLLABUS/GATE.pdf')
+    pdf_dir = os.path.join(app.root_path, 'static','PDF','CSISDS','SYLLABUS')
+    return send_from_directory(pdf_dir, 'GATE.pdf')
 
 @app.route("/CSISGATE")
 def CSISGATE_get():
-    pdf_dir = os.path.join(app.root_path, 'static')
-    return send_from_directory(pdf_dir, 'PDF/CSISDS/SYLLABUS/CSISGATE.pdf')
+    pdf_dir = os.path.join(app.root_path, 'static','PDF','CSISDS','SYLLABUS')
+    return send_from_directory(pdf_dir, 'CSISGATE.pdf')
 
 @app.route("/CSDRDO")
 def CSDRDO_get():
-    pdf_dir = os.path.join(app.root_path, 'static')
-    return send_from_directory(pdf_dir, 'PDF/CSISDS/SYLLABUS/DRDO2026.pdf')
+    pdf_dir = os.path.join(app.root_path, 'static','PDF','CSISDS','SYLLABUS')
+    return send_from_directory(pdf_dir, 'DRDO2026.pdf')
 
 @app.route("/CSISRO")
 def CSISRO_get():
-    pdf_dir = os.path.join(app.root_path, 'static')
-    return send_from_directory(pdf_dir, 'PDF/CSISDS/SYLLABUS/ISRO2023.pdf')
+    pdf_dir = os.path.join(app.root_path, 'static','PDF','CSISDS','SYLLABUS')
+    return send_from_directory(pdf_dir, 'ISRO2023.pdf')
 
 #CSISDS QUESTION PAPERS
 
 @app.route("/CSDA")
 def CSDA_get():
-    pdf_dir = os.path.join(app.root_path, 'static')
-    return send_from_directory(pdf_dir, 'PDF/CSISDS/QP/DA.pdf')
+    pdf_dir = os.path.join(app.root_path, 'static','PDF','CSISDS','QP')
+    return send_from_directory(pdf_dir, 'DA.pdf')
 
 @app.route("/CSDA2024")
 def CSDA2024_get():
-    pdf_dir = os.path.join(app.root_path, 'static')
-    return send_from_directory(pdf_dir, 'PDF/CSISDS/QP/DA2024.pdf')
+    pdf_dir = os.path.join(app.root_path, 'static','PDF','CSISDS','QP')
+    return send_from_directory(pdf_dir, 'DA2024.pdf')
 
 @app.route("/CSGATE2020")
 def CSGATE2020_get():
-    pdf_dir = os.path.join(app.root_path, 'static')
-    return send_from_directory(pdf_dir, 'PDF/CSISDS/QP/GATE2020.pdf')
+    pdf_dir = os.path.join(app.root_path, 'static','PDF','CSISDS','QP')
+    return send_from_directory(pdf_dir, 'GATE2020.pdf')
 
 @app.route("/CSGATE2021P1")
 def CSGATE2021P1_get():
-    pdf_dir = os.path.join(app.root_path, 'static')
-    return send_from_directory(pdf_dir, 'PDF/CSISDS/QP/GATE2021P1.pdf')
+    pdf_dir = os.path.join(app.root_path, 'static','PDF','CSISDS','QP')
+    return send_from_directory(pdf_dir, 'GATE2021P1.pdf')
 
 @app.route("/CSGATE2021P2")
 def CSGATE2021P2_get():
-    pdf_dir = os.path.join(app.root_path, 'static')
-    return send_from_directory(pdf_dir, 'PDF/CSISDS/QP/GATE2021P2.pdf')
+    pdf_dir = os.path.join(app.root_path, 'static','PDF','CSISDS','QP')
+    return send_from_directory(pdf_dir, 'GATE2021P2.pdf')
 
 @app.route("/CSGATE2023")
 def CSGATE2023_get():
-    pdf_dir = os.path.join(app.root_path, 'static')
-    return send_from_directory(pdf_dir, 'PDF/CSISDS/QP/GATE2023.pdf')
+    pdf_dir = os.path.join(app.root_path, 'static','PDF','CSISDS','QP')
+    return send_from_directory(pdf_dir, 'GATE2023.pdf')
 
 @app.route("/CSGATE2024P1")
 def CSGATE2024P1_get():
-    pdf_dir = os.path.join(app.root_path, 'static')
-    return send_from_directory(pdf_dir, 'PDF/CSISDS/QP/GATE2024P1.pdf')
+    pdf_dir = os.path.join(app.root_path, 'static','PDF','CSISDS','QP')
+    return send_from_directory(pdf_dir, 'GATE2024P1.pdf')
 
 @app.route("/CSGATE2024P2")
 def CSGATE2024P2_get():
-    pdf_dir = os.path.join(app.root_path, 'static')
-    return send_from_directory(pdf_dir, 'PDF/CSISDS/QP/GATE2024P2.pdf')
+    pdf_dir = os.path.join(app.root_path, 'static','PDF','CSISDS','QP')
+    return send_from_directory(pdf_dir, 'GATE2024P2.pdf')
 
 
 
