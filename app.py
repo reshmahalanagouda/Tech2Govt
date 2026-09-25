@@ -1,7 +1,7 @@
 import os
 from flask import Flask, render_template, request, jsonify, send_from_directory, url_for
 
-app = Flask(_name_, template_folder='.', static_folder='static')
+app = Flask(__name__, template_folder='.', static_folder='static')
 
 @app.get("/")
 def index_get():
