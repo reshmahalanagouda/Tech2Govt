@@ -1,23 +1,20 @@
 import os
+from flask import Flask, render_template, request, jsonify, send_from_directory, url_for
 
-from flask import Flask, render_template, request, jsonify, send_from_directory, url_for, redirect
+app = Flask(_name_, template_folder='.', static_folder='static')
 
-app=Flask(__name__, template_folder='.',static_folder='static')
 @app.get("/")
 def index_get():
     return render_template("index.html")
-       
+
+@app.get("/AboutUs")
+def AboutUs_get():
+    return render_template("AboutUs.html")
+
 @app.get("/contact")
 def contact_get():
     return render_template("contact.html")
 
-@app.get("/about")
-@app.get("/About")
-@app.get("/AboutUs")
-@app.get("/ABOUT")
-@app.get("/abc")
-def aboutus():
-    return render_template("AboutUs.html")
 
 @app.route("/EEE")
 def EEE_get():
