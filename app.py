@@ -1,7 +1,6 @@
 import os
 
 from flask import Flask, render_template, request, jsonify, send_from_directory, url_for, redirect
-from chat import get_response
 
 app=Flask(__name__, template_folder='.',static_folder='static')
 @app.get("/")
@@ -815,12 +814,10 @@ def CGATE_get():
 
 @app.post("/predict")
 def predict():
+    from chat import get_response
     text=request.get_json().get("message")
     #TODO check if text is valid
     response=get_response(text)
     message={"answer":response}
     return jsonify(message)
-if __name__ == "__main__":
-    port=int(os.environ.get("PORT",10000))
-    app.run(host="0.0.0.0",port=port)
 
