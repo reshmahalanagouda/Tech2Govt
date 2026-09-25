@@ -153,7 +153,7 @@ def BHELSyllabus_get():
 @app.route("/KPSC_Syllabus")
 def KPSCSyllabus_get():
     pdf_dir = os.path.join(app.root_path, 'static')
-    return send_from_directory(pdf_dir, 'PDF/EEE/KPSC_Syllabus.pdf')
+    return send_from_directory(pdf_dir, 'PDF/EEE/KPSC_Syllabus.PDF')
 
 @app.route("/KPCL_Syllabus")
 def KPCLSyllabus_get():
@@ -395,7 +395,7 @@ def CVLCPWD_get():
 
 @app.route("/CVLMES")
 def CVLMES_get():
-    pdf_dir = os.path.join(app.root_path, 'static','PDF','CIVIL','syllabus')
+    pdf_dir = os.path.join(app.root_path, 'static','PDF','CIVIL','Syllabus')
     return send_from_directory(pdf_dir, 'MES.pdf')
 
 @app.route("/CVLPSU")
@@ -405,12 +405,12 @@ def CVLPSU_get():
 
 @app.route("/CVLPWDJE")
 def CVLPWDJE_get():
-    pdf_dir = os.path.join(app.root_path, 'static','PDF','CIVIL','syllabus')
+    pdf_dir = os.path.join(app.root_path, 'static','PDF','CIVIL','Syllabus')
     return send_from_directory(pdf_dir, 'PWDJE.pdf')
 
 @app.route("/CVLPWDR")
 def CVLPWDR_get():
-    pdf_dir = os.path.join(app.root_path, 'static','PDF','CIVIL','syllabus')
+    pdf_dir = os.path.join(app.root_path, 'static','PDF','CIVIL','Syllabus')
     return send_from_directory(pdf_dir, 'PWDR.pdf')
 
 @app.route("/CVLRAILWAY")
@@ -539,27 +539,27 @@ def GATEP2_get():
 
 @app.route("/BSNL2024")
 def BSNL2024_get():
-    pdf_dir = os.path.join(app.root_path, 'static','PDF','ECE','SYLLABUS')
+    pdf_dir = os.path.join(app.root_path, 'static','PDF','ECE','Syllabus')
     return send_from_directory(pdf_dir, 'BSNL2024.pdf')
 
 @app.route("/BSNL2026")
 def BSNL2026_get():
-    pdf_dir = os.path.join(app.root_path, 'static','PDF','ECE','SYLLABUS')
+    pdf_dir = os.path.join(app.root_path, 'static','PDF','ECE','Syllabus')
     return send_from_directory(pdf_dir, 'BSNL2026.pdf')
 
 @app.route("/CEPTAM")
 def CEPTAM_get():
-    pdf_dir = os.path.join(app.root_path, 'static','PDF','ECE','SYLLABUS')
+    pdf_dir = os.path.join(app.root_path, 'static','PDF','ECE','Syllabus')
     return send_from_directory(pdf_dir, 'CEPTAM.pdf')
 
 @app.route("/ECGATE2026")
 def ECGATE2026_get():
-    pdf_dir = os.path.join(app.root_path, 'static','PDF','ECE','SYLLABUS')
+    pdf_dir = os.path.join(app.root_path, 'static','PDF','ECE','Syllabus')
     return send_from_directory(pdf_dir, 'GATE2026.pdf')
 
 @app.route("/NIC2024")
 def NIC2024_get():
-    pdf_dir = os.path.join(app.root_path, 'static','PDF','ECE','SYLLABUS')
+    pdf_dir = os.path.join(app.root_path, 'static','PDF','ECE','Syllabus')
     return send_from_directory(pdf_dir, 'NIC2024.pdf')
 
 #ECE QUESTION PAPERS
