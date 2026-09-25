@@ -1,19 +1,91 @@
-import os
-import json
-import random
-import torch
-import nltk
-nltk.download('punkt')
+class Chatbox {
+    constructor() {
+        this.args = {
+            openButton: document.querySelector('.chatbox__button'),
+            chatBox: document.querySelector('.chatbox__support'),
+            sendButton: document.querySelector('.send__button')
+        }
 
-from model import NeuralNet
-from nltk_utils import bag_of_words, tokenize
+        this.state = false;
+        this.messages = [];
+    }
 
-device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
+    display() {
+        const {openButton, chatBox, sendButton} = this.args;
 
-BASE_DIR = os.path.dirname(os.path.abspath(_file_))
+        openButton.addEventListener('click', () => this.toggleState(chatBox))
 
-with open(os.path.join(BASE_DIR, 'static', 'intents.json'), 'r') as json_data:
-    intents = json.load(json_data)
+        sendButton.addEventListener('click', () => this.onSendButton(chatBox))
 
-FILE = os.path.join(BASE_DIR, "data.pth")
-data = torch.load(FILE, map_location=device)
+        const node = chatBox.querySelector('input');
+        node.addEventListener("keyup", ({key}) => {
+            if (key === "Enter") {
+                this.onSendButton(chatBox)
+            }
+        })
+    }
+
+    toggleState(chatbox) {
+        this.state = !this.state;
+
+        // show or hides the box
+        if(this.state) {
+            chatbox.classList.add('chatbox--active')
+        } else {
+            chatbox.classList.remove('chatbox--active')
+        }
+    }
+
+    onSendButton(chatbox) {
+        var textField = chatbox.querySelector('input');
+        let text1 = textField.value
+        if (text1 === "") {
+            return;
+        }
+
+        let msg1 = { name: "User", message: text1 }
+        this.messages.push(msg1);
+
+        fetch('/predict', {
+            method: 'POST',
+            body: JSON.stringify({ message: text1 }),
+            mode: 'cors',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+          })
+          .then(r => r.json())
+          .then(r => {
+            let msg2 = { name: "Agri", message: r.answer };
+            this.messages.push(msg2);
+            this.updateChatText(chatbox)
+            textField.value = ''
+
+        }).catch((error) => {
+            console.error('Error:', error);
+            this.updateChatText(chatbox)
+            textField.value = ''
+          });
+    }
+
+    updateChatText(chatbox) {
+        var html = '';
+        this.messages.slice().reverse().forEach(function(item, index) {
+            if (item.name === "Agri")
+            {
+                html += '<div class="messages_item messages_item--visitor">' + item.message + '</div>'
+            }
+            else
+            {
+                html += '<div class="messages_item messages_item--operator">' + item.message + '</div>'
+            }
+          });
+
+        const chatmessage = chatbox.querySelector('.chatbox__messages');
+        chatmessage.innerHTML = html;
+    }
+}
+
+
+const chatbox = new Chatbox();
+chatbox.display();
