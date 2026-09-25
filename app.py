@@ -3,7 +3,7 @@ import os
 from flask import Flask, render_template, request, jsonify, send_from_directory, url_for, redirect
 from chat import get_response
 
-app=Flask(__name__, template_folder='.',static_folder='static')
+app=Flask(__name__, template_folder='.',static_folder='.',startic_url_path='')
 @app.get("/")
 def index_get():
     return render_template("index.html")
