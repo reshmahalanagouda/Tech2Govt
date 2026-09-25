@@ -623,22 +623,22 @@ def NIC2020_get():
 
 @app.route("/MGATE")
 def MGATE_get():
-    pdf_dir = os.path.join(app.root_path, 'static','PDF','MECHANICAL','SYLLABUS')
+    pdf_dir = os.path.join(app.root_path, 'static','PDF','MECHANICAL','Syllabus')
     return send_from_directory(pdf_dir, 'GATE.pdf')
 
 @app.route("/MKPSC")
 def MKPSC_get():
-    pdf_dir = os.path.join(app.root_path, 'static','PDF','MECHANICAL','SYLLABUS')
+    pdf_dir = os.path.join(app.root_path, 'static','PDF','MECHANICAL','Syllabus')
     return send_from_directory(pdf_dir, 'KPSC.pdf')
 
 @app.route("/MSSCJE")
 def MSSCJE_get():
-    pdf_dir = os.path.join(app.root_path, 'static','PDF','MECHANICAL','SYLLABUS')
+    pdf_dir = os.path.join(app.root_path, 'static','PDF','MECHANICAL','Syllabus')
     return send_from_directory(pdf_dir, 'SSCJE.pdf')
 
 @app.route("/MUPSC")
 def MUPSC_get():
-    pdf_dir = os.path.join(app.root_path, 'static','PDF','MECHANICAL','SYLLABUS')
+    pdf_dir = os.path.join(app.root_path, 'static','PDF','MECHANICAL','Syllabus')
     return send_from_directory(pdf_dir, 'UPSC.pdf')
 
 #MECHANICAL QUESTION PAPERS
@@ -727,64 +727,64 @@ def SSEJE2024_get():
 
 @app.route("/CSGATE")
 def CSGATE_get():
-    pdf_dir = os.path.join(app.root_path, 'static','PDF','CSISDS','SYLLABUS')
+    pdf_dir = os.path.join(app.root_path, 'static','PDF','CSISDS','Syllabus')
     return send_from_directory(pdf_dir, 'GATE.pdf')
 
 @app.route("/CSISGATE")
 def CSISGATE_get():
-    pdf_dir = os.path.join(app.root_path, 'static','PDF','CSISDS','SYLLABUS')
+    pdf_dir = os.path.join(app.root_path, 'static','PDF','CSISDS','Syllabus')
     return send_from_directory(pdf_dir, 'CSISGATE.pdf')
 
 @app.route("/CSDRDO")
 def CSDRDO_get():
-    pdf_dir = os.path.join(app.root_path, 'static','PDF','CSISDS','SYLLABUS')
+    pdf_dir = os.path.join(app.root_path, 'static','PDF','CSISDS','Syllabus')
     return send_from_directory(pdf_dir, 'DRDO2026.pdf')
 
 @app.route("/CSISRO")
 def CSISRO_get():
-    pdf_dir = os.path.join(app.root_path, 'static','PDF','CSISDS','SYLLABUS')
+    pdf_dir = os.path.join(app.root_path, 'static','PDF','CSISDS','Syllabus')
     return send_from_directory(pdf_dir, 'ISRO2023.pdf')
 
 #CSISDS QUESTION PAPERS
 
 @app.route("/CSDA")
 def CSDA_get():
-    pdf_dir = os.path.join(app.root_path, 'static','PDF','CSISDS','QP')
+    pdf_dir = os.path.join(app.root_path, 'static','PDF','CSISDS','Qp')
     return send_from_directory(pdf_dir, 'DA.pdf')
 
 @app.route("/CSDA2024")
 def CSDA2024_get():
-    pdf_dir = os.path.join(app.root_path, 'static','PDF','CSISDS','QP')
+    pdf_dir = os.path.join(app.root_path, 'static','PDF','CSISDS','Qp')
     return send_from_directory(pdf_dir, 'DA2024.pdf')
 
 @app.route("/CSGATE2020")
 def CSGATE2020_get():
-    pdf_dir = os.path.join(app.root_path, 'static','PDF','CSISDS','QP')
+    pdf_dir = os.path.join(app.root_path, 'static','PDF','CSISDS','Qp')
     return send_from_directory(pdf_dir, 'GATE2020.pdf')
 
 @app.route("/CSGATE2021P1")
 def CSGATE2021P1_get():
-    pdf_dir = os.path.join(app.root_path, 'static','PDF','CSISDS','QP')
+    pdf_dir = os.path.join(app.root_path, 'static','PDF','CSISDS','Qp')
     return send_from_directory(pdf_dir, 'GATE2021P1.pdf')
 
 @app.route("/CSGATE2021P2")
 def CSGATE2021P2_get():
-    pdf_dir = os.path.join(app.root_path, 'static','PDF','CSISDS','QP')
+    pdf_dir = os.path.join(app.root_path, 'static','PDF','CSISDS','Qp')
     return send_from_directory(pdf_dir, 'GATE2021P2.pdf')
 
 @app.route("/CSGATE2023")
 def CSGATE2023_get():
-    pdf_dir = os.path.join(app.root_path, 'static','PDF','CSISDS','QP')
+    pdf_dir = os.path.join(app.root_path, 'static','PDF','CSISDS','Qp')
     return send_from_directory(pdf_dir, 'GATE2023.pdf')
 
 @app.route("/CSGATE2024P1")
 def CSGATE2024P1_get():
-    pdf_dir = os.path.join(app.root_path, 'static','PDF','CSISDS','QP')
+    pdf_dir = os.path.join(app.root_path, 'static','PDF','CSISDS','Qp')
     return send_from_directory(pdf_dir, 'GATE2024P1.pdf')
 
 @app.route("/CSGATE2024P2")
 def CSGATE2024P2_get():
-    pdf_dir = os.path.join(app.root_path, 'static','PDF','CSISDS','QP')
+    pdf_dir = os.path.join(app.root_path, 'static','PDF','CSISDS','Qp')
     return send_from_directory(pdf_dir, 'GATE2024P2.pdf')
 
 
