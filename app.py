@@ -3,7 +3,7 @@ import os
 from flask import Flask, render_template, request, jsonify, send_from_directory, url_for, redirect
 from chat import get_response
 
-app=Flask(__name__, template_folder='.',static_folder='.',static_url_path='')
+app=Flask(__name__, template_folder='.',static_folder='static')
 @app.get("/")
 def index_get():
     return render_template("index.html")
@@ -822,7 +822,5 @@ def predict():
     return jsonify(message)
 if __name__ == "__main__":
     port=int(os.environ.get("PORT",10000))
-    app.run(host='0.0.0.0',port=port,debug=False)
-
-
+    app.run(host="0.0.0.0",port=port)
 
