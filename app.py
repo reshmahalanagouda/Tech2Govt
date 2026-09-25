@@ -6,21 +6,17 @@ app=Flask(__name__, template_folder='.',static_folder='static')
 @app.get("/")
 def index_get():
     return render_template("index.html")
-
-@app.get("/AboutUs")
-def AboutUs_get():
-    return render_template("AboutUs.html")
-
+       
 @app.get("/contact")
 def contact_get():
     return render_template("contact.html")
 
 @app.get("/about")
-def about_get():
-    return render_template("AboutUs.html")
-
+@app.get("/About")
+@app.get("/AboutUs")
+@app.get("/ABOUT")
 @app.get("/abc")
-def abc_get():
+def aboutus():
     return render_template("AboutUs.html")
 
 @app.route("/EEE")
