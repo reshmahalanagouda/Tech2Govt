@@ -2,6 +2,10 @@ import os
 import json
 import random
 import torch
+import nltk
+nltk.download('punkt')
+nltk.download('punkt_tab')
+
 from model import NeuralNet
 from nltk_utils import bag_of_words, tokenize
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
