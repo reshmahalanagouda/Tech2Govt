@@ -11,8 +11,8 @@ def index_get():
 def AboutUs_get():
     return render_template("AboutUs.html")
 
-@app.get("/contact")
-def contact_get():
+@app.get("/abc")
+def abc_get():
     return render_template("contact.html")
 
 @app.route("/EEE")
