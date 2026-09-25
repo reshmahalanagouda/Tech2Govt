@@ -385,53 +385,53 @@ def SDSC_get():
 #CIVIL SYLLABUS
 @app.route("/CVLGATE")
 def CVLGATE_get():
-    pdf_dir = os.path.join(app.root_path, 'static','PDF','CIVIL','SYLLABUS')
+    pdf_dir = os.path.join(app.root_path, 'static','PDF','CIVIL','Syllabus')
     return send_from_directory(pdf_dir, 'GATE.pdf')
 
 @app.route("/CVLCPWD")
 def CVLCPWD_get():
-    pdf_dir = os.path.join(app.root_path, 'static','PDF','CIVIL','SYLLABUS')
+    pdf_dir = os.path.join(app.root_path, 'static','PDF','CIVIL','Syllabus')
     return send_from_directory(pdf_dir, 'CPWD.pdf')
 
 @app.route("/CVLMES")
 def CVLMES_get():
-    pdf_dir = os.path.join(app.root_path, 'static','PDF','CIVIL','SYLLABUS')
+    pdf_dir = os.path.join(app.root_path, 'static','PDF','CIVIL','syllabus')
     return send_from_directory(pdf_dir, 'MES.pdf')
 
 @app.route("/CVLPSU")
 def CVLPSU_get():
-    pdf_dir = os.path.join(app.root_path, 'static','PDF','CIVIL','SYLLABUS')
+    pdf_dir = os.path.join(app.root_path, 'static','PDF','CIVIL','Syllabus')
     return send_from_directory(pdf_dir, 'PSU.pdf')
 
 @app.route("/CVLPWDJE")
 def CVLPWDJE_get():
-    pdf_dir = os.path.join(app.root_path, 'static','PDF','CIVIL','SYLLABUS')
+    pdf_dir = os.path.join(app.root_path, 'static','PDF','CIVIL','syllabus')
     return send_from_directory(pdf_dir, 'PWDJE.pdf')
 
 @app.route("/CVLPWDR")
 def CVLPWDR_get():
-    pdf_dir = os.path.join(app.root_path, 'static','PDF','CIVIL','SYLLABUS')
+    pdf_dir = os.path.join(app.root_path, 'static','PDF','CIVIL','syllabus')
     return send_from_directory(pdf_dir, 'PWDR.pdf')
 
 @app.route("/CVLRAILWAY")
 def CVLRAILWAY_get():
-    pdf_dir = os.path.join(app.root_path, 'static','PDF','CIVIL','SYLLABUS')
+    pdf_dir = os.path.join(app.root_path, 'static','PDF','CIVIL','Syllabus')
     return send_from_directory(pdf_dir, 'RAILWAY.pdf')
 
 @app.route("/CVLRRBJE")
 def CVLRRBJE_get():
-    pdf_dir = os.path.join(app.root_path, 'static','PDF','CIVIL','SYLLABUS')
+    pdf_dir = os.path.join(app.root_path, 'static','PDF','CIVIL','Syllabus')
     return send_from_directory(pdf_dir, 'RRBJE.pdf')
 
 @app.route("/CVLSSCJE")
 def CVLSSCJE_get():
-    pdf_dir = os.path.join(app.root_path, 'static','PDF','CIVIL','SYLLABUS')
+    pdf_dir = os.path.join(app.root_path, 'static','PDF','CIVIL','Syllabus')
     return send_from_directory(pdf_dir, 'SSCJE.pdf')
 
 @app.route("/CVLNEW")
 def CVLNEW_get():
-    pdf_dir = os.path.join(app.root_path, 'static','PDF','CIVIL','SYLLABUS')
-    return send_from_directory(pdf_dir, 'NEWSYL.pdf')
+    pdf_dir = os.path.join(app.root_path, 'static','PDF','CIVIL','Syllabus')
+    return send_from_directory(pdf_dir, 'NewSyl.pdf')
 
 #CIVIL QUESTION PAPERS
 
