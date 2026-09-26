@@ -15,7 +15,7 @@ def AboutUs_get():
 
 @app.get("/contact")
 @app.get("/Contact")
-@app.get("ContactUs")    
+@app.get("/ContactUs")    
 def contact_get():
     return render_template("contact.html")
 
