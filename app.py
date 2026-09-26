@@ -8,10 +8,14 @@ def index_get():
     return render_template("index.html")
 
 @app.get("/AboutUs")
+@app.get("/about")
+@app.get("/About")
 def AboutUs_get():
     return render_template("AboutUs.html")
 
 @app.get("/contact")
+@app.get("/Contact")
+@app.get("ContactUs")    
 def contact_get():
     return render_template("contact.html")
 
