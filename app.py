@@ -821,6 +821,18 @@ def predict():
     response=get_response(text)
     message={"answer":response}
     return jsonify(message)
+
+# --- FIX FOR PHONE PDF OPENING ---
+@app.route('/pdf/<path:filename>')
+def serve_pdf(filename):
+    # Serves PDF from static/PDF folder - faster for mobile
+    pdf_dir = os.path.join(app.static_folder, 'PDF')
+    return send_from_directory(pdf_dir, filename, mimetype='application/pdf')
+
+@app.route('/static/PDF/<path:filename>')
+def serve_pdf_static(filename):
+    pdf_dir = os.path.join(app.static_folder, 'PDF')
+    return send_from_directory(pdf_dir, filename, mimetype='application/pdf')
     
 if __name__ == "__main__":
     port=int(os.environ.get("PORT",10000))
